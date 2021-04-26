@@ -10,7 +10,7 @@ namespace SegmentData2Oracle
         static void Main(string[] args)
         {
             Process proc = null;
-            string filename = "output.txt", bat_filename = "bat_status.txt";
+            string filename = "output.txt", bat_filename = "bat_status.txt", err_filename = "stack_error.txt";
 
             try
             {
@@ -69,7 +69,7 @@ namespace SegmentData2Oracle
             }
             catch(Exception ex)
             {
-                Console.WriteLine(ex.StackTrace.ToString());
+                File.WriteAllText(err_filename, ex.StackTrace.ToString());
             }
         }
 
