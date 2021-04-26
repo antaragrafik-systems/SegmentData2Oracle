@@ -63,7 +63,7 @@ namespace SegmentData2Oracle
                     Console.WriteLine("esri converter is not running");
                 }
 
-                Thread.Sleep(5000);
+                Thread.Sleep(3000);
 
                 File.WriteAllText(filename, "done");
             }
